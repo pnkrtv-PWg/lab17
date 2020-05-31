@@ -1,0 +1,472 @@
+header{
+    background-image: url(../image/home.png);
+    background-repeat: no-repeat;
+    height: 760px;
+}
+
+.logo{
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15pt;
+    padding-top: 20px;
+}
+
+.context{
+    color: white;
+    font-family: 'Roboto';
+    font-size: 30pt;
+}
+
+.sub-context{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.head-content{
+    text-align: center;
+    padding-top: 270px;
+}
+
+.cont-button{
+    padding-top: 70px;
+}
+.navmenu{
+    padding-top: 20px;
+
+}
+
+.services{
+    text-align: center;
+}
+
+.serv-title{
+    padding-top: 100px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #555555;
+    margin: 0 auto;
+}
+
+.serv-subtitle{
+    font-family: 'Roboto';
+    color: #555555;
+    font-size: 17px;
+    padding-bottom: 100px;
+}
+
+.service-box-title{
+    margin: 0 auto;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: #555555;
+}
+
+.service-box-desrciption{
+    font-family: 'Roboto';
+    color: #555555;
+    padding-bottom: 100px;
+}
+
+.slider-focus{
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+
+.slider-title{
+    padding-top: 100px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #555555;
+    margin: 0 auto;
+}
+
+.slider-subtitle{
+    font-family: 'Roboto';
+    color: #555555;
+    font-size: 17px;
+    padding-bottom: 50px;
+}
+
+.about-us{
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.about-title{
+    padding-top: 100px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #555555;
+    margin: 0 auto;
+}
+
+.about-subtitle{
+    font-family: 'Roboto';
+    color: #555555;
+    font-size: 17px;
+    padding-bottom: 50px;
+}
+
+.about-columns{
+    font-family: 'Roboto';
+    color: #555555;
+    text-align: justify;
+    padding-bottom: 50px;
+}
+
+.photo-title{
+    margin: 0 auto;
+    padding-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: #555555;
+    font-size: 17px;
+}
+
+.photo-descr{
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 100px;
+    font-family: 'Roboto';
+    color: #555555;
+}
+
+.works{
+    text-align: center;
+}
+
+.work-title{
+    padding-top: 100px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #555555;
+    margin: 0 auto;
+}
+
+.filter-menu{
+    max-width: max-content;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    
+    /* Show 4th slide on md if col-md-4*/
+    .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -33.3333%;  /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+
+    /* Show 3rd slide on sm if col-sm-6*/
+    .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -50%;  /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+}
+@media (min-width: 576px) {
+
+    .carousel-item {
+        margin-right: 0;
+    }
+    /* show 2 items */
+    .carousel-inner .active + .carousel-item {
+        display: block;
+    }
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
+        transition: none;
+    }
+    .carousel-inner .carousel-item-next {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+    /* left or forward direction */
+    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* farthest right hidden item must be also positioned for animations */
+    .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    /* right or prev direction */
+    .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+/* MD */
+@media (min-width: 768px) {
+
+    /* show 3rd of 3 item slide */
+    .carousel-inner .active + .carousel-item + .carousel-item {
+        display: block;
+    }
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+        transition: none;
+    }
+    .carousel-inner .carousel-item-next {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+    /* left or forward direction */
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* right or prev direction */
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+/* LG */
+@media (min-width: 991px) {
+
+    /* show 4th item */
+    .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
+        display: block;
+    }
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+        transition: none;
+    }
+    /* Show 5th slide on lg if col-lg-3 */
+    .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -25%;  /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    /* left or forward direction */
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* right or prev direction //t - previous slide direction last item animation fix */
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+
+.hbut:hover{
+    color: #c0301c;
+}
+
+.works{
+    padding-bottom: 100px;
+}
+
+.calling-us{
+    background-image: url(../image/callus.png);
+    height: 300px;
+}
+.call-us{
+    text-align:center;
+    color:white;
+    padding-top: 100px;
+    font-family: 'Roboto';
+    font-size: 20px;
+}
+.call-button{
+    padding-top: 50px;
+}
+.contact-us{
+    padding-top: 100px;
+    text-align: center;
+}
+
+.contact-title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #555555;
+    margin: 0 auto;
+}
+
+.contact-subtitle{
+    font-family: 'Roboto';
+    color: #555555;
+    font-size: 17px;
+    padding-bottom: 50px;
+}
+
+.butlabel{
+    padding-left: 25px;
+    padding-top: 6px;
+    font-family: 'Roboto';
+}
+.butlabel span{
+    color: #c0301c;
+}
+
+.forms{
+    padding-bottom: 100px;
+}
+
+.but-text{
+    padding-left: 5px;
+}
+
+.rtext{
+    text-align:left;
+}
+
+.ricon{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #555555;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.rtext{
+    font-family: 'Roboto';
+    color: #555555;
+    font-size: 13px;
+}
+
+.foot-text{
+    color: white;
+    font-family: 'Roboto';
+}
+
+.clan-foot{
+    background-color: #c0301c;
+    height: 250px;
+}
+
+.soc-icon {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 15px;
+}
+
+.other-foot{
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.transit{
+    transition: all 1s !important;
+}
+.transit:hover{
+    color: #c0301c;
+}
+
+
+.scroll-down{
+    width: 70px;
+    height: 70px;
+    background: white;
+    opacity: 0.85;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 33px;
+    left: calc(50% - 35px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.scroll-down a{
+    animation-name: floating;
+    -webkit-animation-name: floating;
+ 
+    animation-duration: 1s;   
+    -webkit-animation-duration: 1s;
+ 
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+ 
+@keyframes floating {
+    0% {
+        transform: translateY(0%);  
+    }
+    50% {
+        transform: translateY(8%);  
+    }   
+    100% {
+        transform: translateY(0%);
+    }           
+}
+ 
+@-webkit-keyframes floating {
+    0% {
+        -webkit-transform: translateY(0%);  
+    }
+    50% {
+        -webkit-transform: translateY(8%);  
+    }   
+    100% {
+        -webkit-transform: translateY(0%);
+    }           
+}
+
+.slick-next {
+    right: 13px !important;
+    top: 30% !important;
+    background: grey !important;
+}
+
+.slick-prev{
+    left: 2px !important;
+    top: 30% !important;
+    background: grey !important;
+    z-index: 1;
+}
+
+.slick-next:hover{
+    background: #c0301c !important;
+    transition: 1s  !important;
+}
+.slick-prev:hover{
+    background: #c0301c !important;
+    transition: 1s  !important;
+}
+
+.slider-item img:hover{
+    filter: brightness(60%);
+    transition: 1s;
+}
+
+.img-trans:hover{
+    color: #c0301c;
+    opacity: 70;
+    transition: 1s;
+}
+
