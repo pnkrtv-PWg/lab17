@@ -38,7 +38,7 @@ $('.slider').slick({
 $('.fade-slide').slick({
   autoplay:true,
   arrows: false,
-  autoplaySpeed:1500,
+  autoplaySpeed:2500,
   infinite: true,
   speed: 2000,
   fade: true,
